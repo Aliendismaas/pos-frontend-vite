@@ -134,7 +134,7 @@ const HeroSection = () => {
                   </div>
                 </div>
                 <img 
-                  src="/dashboard.png" 
+                  src="/pos-mockup.svg" 
                   alt="POS System Interface" 
                   className="w-full h-auto rounded-lg shadow-inner"
                 />
