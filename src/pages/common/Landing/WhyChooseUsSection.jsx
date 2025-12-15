@@ -3,6 +3,13 @@ import { BarChart3 } from 'lucide-react'
 import React from 'react'
 
 const WhyChooseUsSection = () => {
+
+  const benefitData = [
+    "Easy to use interface",
+    "Works offline",
+    "Mobile-friendly design",
+    "24x7 Support"
+  ]
   return (
     <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,13 +23,7 @@ const WhyChooseUsSection = () => {
                 reliability, and powerful features that drive business growth.
               </p>
               <div className="space-y-4">
-                {[
-                  "Easy to use interface",
-                  "Works offline",
-                  "GST-ready invoicing",
-                  "Mobile-friendly design",
-                  "24x7 Support"
-                ].map((benefit, index) => (
+                {benefitData.map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
                     <span className="text-foreground">{benefit}</span>
