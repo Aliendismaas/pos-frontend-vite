@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF4D6D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF1744;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Rounded rectangle background -->
+  <rect width="32" height="32" rx="6" ry="6" fill="url(#bgGradient)"/>
+  
+  <!-- Shopping cart icon -->
+  <g transform="translate(8, 8)">
+    <!-- Cart body -->
+    <path d="M 0 2 L 2 2 L 4 10 L 13 10 L 15 4 L 4.5 4" 
+          fill="none" 
+          stroke="white" 
+          stroke-width="1.5" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    
+    <!-- Cart wheels -->
+    <circle cx="5.5" cy="13" r="1.2" fill="white"/>
+    <circle cx="11.5" cy="13" r="1.2" fill="white"/>
+  </g>
+</svg>
