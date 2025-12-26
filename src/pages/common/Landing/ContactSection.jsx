@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, Clock, ArrowRight, CheckCircle } from 'lucide-reac
 
 const ContactSection = () => {
   return (
-    <section className="py-16 bg-gradient-to-br from-primary to-primary-dark text-white overflow-hidden relative" id='contact'>
+    <section className="py-16 bg-linear-to-br from-primary to-primary-dark text-white overflow-hidden relative" id='contact'>
       {/* Background Pattern */}
       <div className="absolute inset-0 z-0 opacity-10">
         <div className="grid grid-cols-10 h-full">
@@ -57,7 +57,7 @@ const ContactSection = () => {
                       type="tel" 
                       id="phone" 
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary text-gray-900" 
-                      placeholder="+91 98765 43210"
+                      placeholder="+255 767277860"
                     />
                   </div>
                   <div>

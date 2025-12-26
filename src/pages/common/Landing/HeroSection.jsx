@@ -66,7 +66,7 @@ const HeroSection = () => {
               { icon: <ShoppingCart className="w-4 h-4" />, text: "Fast Checkout" },
               { icon: <BarChart3 className="w-4 h-4" />, text: "Real-time Analytics" },
               { icon: <Shield className="w-4 h-4" />, text: "Secure Access" },
-              { icon: <CheckCircle className="w-4 h-4" />, text: "GST Ready" }
+              { icon: <CheckCircle className="w-4 h-4" />, text: "VAT Ready" }
             ].map((feature, index) => (
               <div 
                 key={index} 
@@ -86,7 +86,7 @@ const HeroSection = () => {
             <Button 
               onClick={handleGetStartedClick} 
               size="lg" 
-              className="text-lg px-8 py-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-bounce-subtle"
+              className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-bounce-subtle"
             >
               Get Started
               <ArrowRight className="w-5 h-5 ml-2"/>
@@ -94,7 +94,7 @@ const HeroSection = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="text-lg px-8 py-3 hover:bg-primary/5 transition-all duration-300"
+              className="text-lg px-8 py-6 hover:bg-primary/5 transition-all duration-300"
               onClick={handleWatchDemo}
             >
               Watch Demo Video

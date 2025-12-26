@@ -13,7 +13,7 @@ const MobileAppShowcase = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-primary/5 to-primary/10 overflow-hidden relative">
+    <section className="py-16 bg-linear-to-br from-primary/5 to-primary/10 overflow-hidden relative">
       {/* Background Pattern */}
       <div className="absolute inset-0 z-0 opacity-10">
         <div className="grid grid-cols-10 h-full">
@@ -32,7 +32,7 @@ const MobileAppShowcase = () => {
               <span>Mobile App</span>
             </div>
             
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 dark:text-gray-300">
               Take Your Business <span className="text-primary">Anywhere</span> With Our Mobile App
             </h2>
             

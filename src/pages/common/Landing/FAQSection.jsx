@@ -14,10 +14,7 @@ const FAQSection = () => {
       question: "Can I use the POS system offline?",
       answer: "Yes! Our POS system works completely offline. All data syncs automatically when you're back online, ensuring uninterrupted business operations even during internet outages."
     },
-    {
-      question: "Is the system GST-compliant?",
-      answer: "Absolutely! Our system is fully GST-compliant with automatic tax calculations, proper invoice formats, and comprehensive reporting that meets all Indian tax requirements."
-    },
+ 
     {
       question: "What kind of support is available?",
       answer: "We provide 24x7 customer support via phone, email, and live chat. Our dedicated support team is always ready to assist you with any questions or issues you might encounter."
@@ -76,13 +73,13 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white dark:bg-black" id="faq">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Frequently Asked <span className="text-primary">Questions</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Frequently Asked <span className="text-primary dark:text-primary">Questions</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             Everything you need to know about our POS system. Can't find the answer you're looking for? 
             Please chat with our friendly team.
           </p>
@@ -91,14 +88,14 @@ const FAQSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           {/* Left Side - FAQs */}
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden">
               <Accordion type="single" collapsible className="w-full">
                 {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`}>
-                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-50 text-gray-900 font-medium">
+                  <AccordionItem key={index} value={`item-${index}`} className="border-gray-100 dark:border-gray-700">
+                    <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-gray-50 dark:hover:bg-gray-700/50 text-gray-900 dark:text-white font-medium">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="px-6 pb-4 pt-2 text-gray-600">
+                    <AccordionContent className="px-6 pb-4 pt-2 text-gray-600 dark:text-gray-400">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -107,8 +104,8 @@ const FAQSection = () => {
             </div>
             
             <div className="mt-8 text-center">
-              <p className="text-gray-600 mb-4">Still have questions?</p>
-              <Button variant="outline" className="group">
+              <p className="text-gray-600 dark:text-gray-400 mb-4">Still have questions?</p>
+              <Button variant="outline" className="group dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white">
                 Contact Our Support Team
                 <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -117,21 +114,21 @@ const FAQSection = () => {
           
           {/* Right Side - Support Options */}
           <div className="lg:sticky lg:top-24">
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">Support Options</h3>
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-transparent dark:border-gray-700">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Support Options</h3>
               
               <div className="space-y-4">
                 {supportOptions.map((option, index) => (
-                  <div key={index} className="bg-white rounded-lg p-4 shadow-sm">
+                  <div key={index} className="bg-white dark:bg-gray-700/50 rounded-lg p-4 shadow-sm border border-transparent dark:border-gray-600">
                     <div className="flex items-start space-x-4">
-                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                      <div className="w-10 h-10 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary dark:text-primary flex-shrink-0">
                         {option.icon}
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-medium text-gray-900">{option.title}</h4>
-                        <p className="text-sm text-gray-500 mb-1">{option.description}</p>
-                        <p className="text-sm font-medium text-gray-900 mb-3">{option.action}</p>
-                        <Button variant="outline" size="sm" className="w-full justify-center">
+                        <h4 className="font-medium text-gray-900 dark:text-white">{option.title}</h4>
+                        <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">{option.description}</p>
+                        <p className="text-sm font-medium text-gray-900 dark:text-gray-200 mb-3">{option.action}</p>
+                        <Button variant="outline" size="sm" className="w-full justify-center dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white">
                           {option.buttonText}
                         </Button>
                       </div>
@@ -140,20 +137,20 @@ const FAQSection = () => {
                 ))}
               </div>
               
-              <div className="mt-6 bg-primary/5 rounded-lg p-4 border border-primary/10">
-                <h4 className="font-medium text-gray-900 mb-2">Business Hours</h4>
+              <div className="mt-6 bg-primary/5 dark:bg-primary/10 rounded-lg p-4 border border-primary/10 dark:border-primary/20">
+                <h4 className="font-medium text-gray-900 dark:text-white mb-2">Business Hours</h4>
                 <div className="space-y-1 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Monday - Friday:</span>
-                    <span className="font-medium">9:00 AM - 8:00 PM</span>
+                    <span className="text-gray-600 dark:text-gray-400">Monday - Friday:</span>
+                    <span className="font-medium text-gray-900 dark:text-gray-200">9:00 AM - 8:00 PM</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Saturday:</span>
-                    <span className="font-medium">10:00 AM - 6:00 PM</span>
+                    <span className="text-gray-600 dark:text-gray-400">Saturday:</span>
+                    <span className="font-medium text-gray-900 dark:text-gray-200">10:00 AM - 6:00 PM</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Sunday:</span>
-                    <span className="font-medium">Closed</span>
+                    <span className="text-gray-600 dark:text-gray-400">Sunday:</span>
+                    <span className="font-medium text-gray-900 dark:text-gray-200">Closed</span>
                   </div>
                 </div>
               </div>

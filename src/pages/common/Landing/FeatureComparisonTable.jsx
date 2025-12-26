@@ -51,7 +51,7 @@ const FeatureComparisonTable = () => {
     <div className="overflow-x-auto">
       <table className="w-full border-collapse">
         <thead>
-          <tr className="bg-gray-50">
+          <tr className="bg-gray-50 dark:bg-gray-400">
             <th className="py-4 px-6 text-left text-gray-600 font-medium">Features</th>
             <th className="py-4 px-6 text-center text-gray-600 font-medium w-1/5">
               <div className="text-lg font-bold text-gray-900">Basic</div>
@@ -71,7 +71,7 @@ const FeatureComparisonTable = () => {
           {featureCategories.map((category, categoryIndex) => (
             <React.Fragment key={categoryIndex}>
               {/* Category Header */}
-              <tr className="bg-gray-50">
+              <tr className="bg-gray-50 dark:bg-gray-400">
                 <td 
                   colSpan="4" 
                   className="py-3 px-6 text-left font-semibold text-gray-800 border-t border-b border-gray-200"
@@ -107,30 +107,30 @@ const FeatureComparisonTable = () => {
           <tr className="bg-gray-50">
             <td 
               colSpan="4" 
-              className="py-3 px-6 text-left font-semibold text-gray-800 border-t border-b border-gray-200"
+              className="py-3 px-6 text-left font-semibold text-gray-800 border-t border-b border-gray-200 dark:bg-gray-400"
             >
               Support
             </td>
           </tr>
           <tr className="hover:bg-gray-50">
-            <td className="py-4 px-6 text-left text-gray-700 border-b border-gray-100">Email Support</td>
-            <td className="py-4 px-6 text-center border-b border-gray-100">Business Hours</td>
-            <td className="py-4 px-6 text-center border-b border-gray-100 bg-primary/5">24/7</td>
-            <td className="py-4 px-6 text-center border-b border-gray-100">24/7 Priority</td>
+            <td className="py-4 px-6 text-left text-gray-700 border-b border-gray-100 dark:text-gray-500">Email Support</td>
+            <td className="py-4 px-6 text-center border-b border-gray-100 dark:text-gray-500">Business Hours</td>
+            <td className="py-4 px-6 text-center border-b border-gray-100 bg-primary/5 dark:text-gray-500">24/7</td>
+            <td className="py-4 px-6 text-center border-b border-gray-100 dark:text-gray-500">24/7 Priority</td>
           </tr>
           <tr className="hover:bg-gray-50">
-            <td className="py-4 px-6 text-left text-gray-700 border-b border-gray-100">Phone Support</td>
-            <td className="py-4 px-6 text-center border-b border-gray-100">
-              <X className="w-5 h-5 text-gray-300 mx-auto" />
+            <td className="py-4 px-6 text-left text-gray-700 border-b border-gray-100 dark:text-gray-500">Phone Support</td>
+            <td className="py-4 px-6 text-center border-b border-gray-100 dark:text-gray-500">
+              <X className="w-5 h-5 text-gray-300 mx-auto dark:text-gray-500" />
             </td>
-            <td className="py-4 px-6 text-center border-b border-gray-100 bg-primary/5">Business Hours</td>
-            <td className="py-4 px-6 text-center border-b border-gray-100">24/7</td>
+            <td className="py-4 px-6 text-center border-b border-gray-100 bg-primary/5 dark:text-gray-500">Business Hours</td>
+            <td className="py-4 px-6 text-center border-b border-gray-100 dark:text-gray-500">24/7</td>
           </tr>
           <tr className="hover:bg-gray-50">
-            <td className="py-4 px-6 text-left text-gray-700 border-b border-gray-100">Response Time</td>
-            <td className="py-4 px-6 text-center border-b border-gray-100">48 hours</td>
-            <td className="py-4 px-6 text-center border-b border-gray-100 bg-primary/5">24 hours</td>
-            <td className="py-4 px-6 text-center border-b border-gray-100">4 hours</td>
+            <td className="py-4 px-6 text-left text-gray-700 border-b border-gray-100 dark:text-gray-500">Response Time</td>
+            <td className="py-4 px-6 text-center border-b border-gray-100 dark:text-gray-500">48 hours</td>
+            <td className="py-4 px-6 text-center border-b border-gray-100 bg-primary/5 dark:text-gray-500">24 hours</td>
+            <td className="py-4 px-6 text-center border-b border-gray-100 dark:text-gray-500">4 hours</td>
           </tr>
         </tbody>
       </table>

@@ -3,7 +3,7 @@ import React from 'react'
 
 const TrustedLogos = () => {
   return (
-    <section className="py-16 bg-muted/30">
+    <section className="py-16 bg-muted/30 dark:bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
