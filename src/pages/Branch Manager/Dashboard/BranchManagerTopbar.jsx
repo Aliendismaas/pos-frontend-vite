@@ -10,7 +10,7 @@ export default function BranchManagerTopbar() {
   const { branch } = useSelector((state) => state.branch);
 
   return (
-    <header className="bg-background border-b px-6 py-4 flex items-center justify-between">
+    <header className="bg-background dark:bg-black border-b px-6 py-4 flex items-center justify-between">
       <div>
         <h1 className="text-xl font-semibold text-foreground">
           {branch ? branch.name : "Branch Dashboard"}

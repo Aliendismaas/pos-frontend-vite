@@ -42,8 +42,8 @@ export default function StoreListPage() {
 
 
   return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
+    <div className="space-y-6 max-w-4xl">
+      <div className="flex items-center justify-between ">
         <div>
           <h2 className="text-3xl font-bold tracking-tight">Stores</h2>
           <p className="text-muted-foreground">
@@ -53,7 +53,7 @@ export default function StoreListPage() {
        
       </div>
 
-      <Card>
+      <Card className="-mr-10">
         <CardHeader>
           <CardTitle>All Stores</CardTitle>
         </CardHeader>

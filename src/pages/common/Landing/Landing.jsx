@@ -1,21 +1,7 @@
-import { Button } from "@/components/ui/button";
-import {
-  ShoppingCart,
-  BarChart3,
-  Users,
-  Shield,
-  FileText,
-  Store,
-  CheckCircle,
-  Play,
-  Star,
-  ArrowDown,
-} from "lucide-react";
 import Header from "./Header";
 import HeroSection from "./HeroSection";
 import TrustedLogos from "./TrustedLogos";
 import PricingCalculator from "./PricingCalculator";
-// import FeatureComparisonSection from './FeatureComparison'
 import MobileAppShowcase from "./MobileAppShowcase";
 import TestimonialCarousel from "./TestimonialCarousel";
 import LiveDemoSection from "./LiveDemoSection";
@@ -26,6 +12,7 @@ import PricingSection from "./PricingSection";
 import WhyChooseUsSection from "./WhyChooseUsSection";
 import KeyFeaturesSection from "./KeyFeaturesSection";
 import FeatureComparisonSection from "./FeatureComparisonSection";
+
 
 function Landing() {
   return (

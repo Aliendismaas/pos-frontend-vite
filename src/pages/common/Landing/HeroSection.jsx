@@ -16,10 +16,10 @@ const HeroSection = () => {
     setShowVideo(true);
   }
   return (
-    <section className="pt-24 pb-16 bg-gradient-to-br from-primary/5 to-primary/10 relative overflow-hidden">
+    <section className="pt-24 pb-16 bg-linear-to-br from-primary/5 to-primary/10 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 z-0 opacity-10">
-        <div className="absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-primary/20 to-transparent"></div>
+        <div className="absolute top-0 left-0 right-0 h-64 bg-linear-to-b from-primary/20 to-transparent"></div>
         <div className="grid grid-cols-10 h-full">
           {Array.from({ length: 100 }).map((_, i) => (
             <div key={i} className="border-r border-t border-primary/5"></div>
@@ -34,7 +34,7 @@ const HeroSection = () => {
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
             <span 
-              className="bg-gradient-to-r from-primary to-emerald-600 bg-clip-text text-transparent animate-fade-in-up"
+              className="bg-linear-to-r from-primary to-emerald-600 bg-clip-text text-transparent animate-fade-in-up"
               style={{ animationDelay: '0.1s' }}
             >
               Powerful POS System For
@@ -44,7 +44,7 @@ const HeroSection = () => {
               text="Malls, Supermarkets & Retail Chains"
               speed={80}
               delay={1500}
-              className="text-primary bg-gradient-to-r from-primary to-emerald-600 bg-clip-text text-transparent"
+              className="text-primary bg-linear-to-r from-primary to-emerald-600 bg-clip-text text-transparent"
               showCursor={true}
               cursorBlink={true}
             />

@@ -181,7 +181,7 @@ const AddPlanDialog = ({ open, onOpenChange, onSuccess }) => {
     };
 
     return (
-      <Form className="space-y-4">
+      <Form className="space-y-4 ">
         {/* Name */}
         <div>
           <label className="block font-medium" htmlFor="plan-name">Name</label>
@@ -273,7 +273,7 @@ const AddPlanDialog = ({ open, onOpenChange, onSuccess }) => {
   };
 
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
+    <Dialog open={open} onOpenChange={onOpenChange} >
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Add Subscription Plan</DialogTitle>

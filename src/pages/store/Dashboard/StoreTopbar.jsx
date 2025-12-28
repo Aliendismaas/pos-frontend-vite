@@ -9,7 +9,7 @@ import { Input } from "../../../components/ui/input";
 export default function StoreTopbar() {
  
   return (
-    <header className="w-full h-16 bg-background border-b flex items-center px-6 justify-between shadow-sm">
+    <header className="w-full h-16 bg-background dark:bg-black border-b flex items-center px-6 justify-between shadow-sm">
       {/* Search */}
       <div className="flex-1 max-w-md relative">
        {/* <h1 className="storeName text-primary text-3xl">{store.store?.brand}</h1> */}

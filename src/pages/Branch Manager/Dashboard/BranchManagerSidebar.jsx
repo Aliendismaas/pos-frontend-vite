@@ -76,7 +76,7 @@ export default function BranchManagerSidebar() {
   };
 
   return (
-    <aside className="h-screen w-64 bg-sidebar border-r border-sidebar-border flex flex-col py-6 px-4 shadow-lg">
+    <aside className="h-screen w-64 bg-sidebar dark:bg-black border-r border-sidebar-border flex flex-col py-6 px-4 shadow-lg">
       <div className="mb-8 text-2xl font-extrabold text-primary tracking-tight flex items-center gap-2">
         <Package className="w-7 h-7 text-primary" />
         Branch Manager
