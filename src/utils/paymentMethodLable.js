@@ -4,8 +4,8 @@
         return 'Cash';
       case 'card':
         return 'Card';
-      case 'upi':
-        return 'UPI';
+      case 'LIPA_NAMBA':
+        return 'LIPA_NAMBA';
       default:
         return method;
     }

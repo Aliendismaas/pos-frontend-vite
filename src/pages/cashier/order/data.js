@@ -41,8 +41,8 @@
           return 'Cash';
         case 'CARD':
           return 'Card';
-        case 'UPI':
-          return 'UPI';
+        case 'LIPA_NAMBA':
+          return 'LIPA_NAMBA';
         default:
           return mode;
       }

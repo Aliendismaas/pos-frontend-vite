@@ -37,9 +37,9 @@ const CartItem = ({item,updateCartItemQuantity,removeFromCart}) => {
                         </Button>
                       </div>
                       <div className="text-right">
-                        <p className="font-medium">Tzs {item.sellingPrice}</p>
+                        <p className="font-medium">Tzs {item.sellingPrice.toLocaleString()}</p>
                         <p className="text-sm font-bold text-green-600">
-                          Tzs {(item.sellingPrice * item.quantity).toFixed(2)}
+                          Tzs {(item.sellingPrice * item.quantity).toLocaleString()}
                         </p>
                       </div>
                       <Button

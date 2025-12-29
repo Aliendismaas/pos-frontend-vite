@@ -66,17 +66,17 @@ const Settings = () => {
   });
 
   const [taxSettings, setTaxSettings] = useState({
-    gstEnabled: true,
-    gstPercentage: 18,
-    applyGstToAll: true,
+    vatEnabled: true,
+    vatPercentage: 18,
+    applyVatToAll: true,
     showTaxBreakdown: true,
   });
 
   const [paymentSettings, setPaymentSettings] = useState({
     acceptCash: true,
-    acceptUPI: true,
+    acceptLIPA: true,
     acceptCard: true,
-    upiId: "example@upi",
+    LipaId: "550670",
     cardTerminalId: "TERM12345",
   });
 
@@ -134,7 +134,7 @@ const Settings = () => {
         <TabsList className="grid w-full grid-cols-5">
           <TabsTrigger value="branch-info" className="flex items-center gap-2">
             <Building className="h-4 w-4" />
-            Branch Info
+            Branch <p className="hidden">Info</p>
           </TabsTrigger>
           <TabsTrigger value="printer" className="flex items-center gap-2">
             <Printer className="h-4 w-4" />
@@ -297,36 +297,36 @@ const Settings = () => {
             <CardContent className="space-y-6">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <label htmlFor="gst-enabled" className="text-sm font-medium">
-                    Enable GST
+                  <label htmlFor="vat-enabled" className="text-sm font-medium">
+                    Enable VAT
                   </label>
                   <Switch
-                    id="gst-enabled"
-                    checked={taxSettings.gstEnabled}
+                    id="vat-enabled"
+                    checked={taxSettings.vatEnabled}
                     onCheckedChange={(checked) =>
-                      handleTaxSettingsChange("gstEnabled", checked)
+                      handleTaxSettingsChange("vatEnabled", checked)
                     }
                   />
                 </div>
 
-                {taxSettings.gstEnabled && (
+                {taxSettings.vatEnabled && (
                   <div className="space-y-4 pl-6 border-l-2 border-gray-100">
                     <div className="space-y-2">
                       <label
-                        htmlFor="gst-percentage"
+                        htmlFor="vat-percentage"
                         className="text-sm font-medium"
                       >
-                        GST Percentage (%)
+                        VAT Percentage (%)
                       </label>
                       <Input
-                        id="gst-percentage"
+                        id="vat-percentage"
                         type="number"
                         min="0"
                         max="100"
-                        value={taxSettings.gstPercentage}
+                        value={taxSettings.vatPercentage}
                         onChange={(e) =>
                           handleTaxSettingsChange(
-                            "gstPercentage",
+                            "vatPercentage",
                             parseInt(e.target.value)
                           )
                         }
@@ -335,16 +335,16 @@ const Settings = () => {
 
                     <div className="flex items-center justify-between">
                       <label
-                        htmlFor="apply-gst-all"
+                        htmlFor="apply-vat-all"
                         className="text-sm font-medium"
                       >
-                        Apply GST to All Products
+                        Apply VAT to All Products
                       </label>
                       <Switch
-                        id="apply-gst-all"
-                        checked={taxSettings.applyGstToAll}
+                        id="apply-vat-all"
+                        checked={taxSettings.applyVatToAll}
                         onCheckedChange={(checked) =>
-                          handleTaxSettingsChange("applyGstToAll", checked)
+                          handleTaxSettingsChange("applyVatToAll", checked)
                         }
                       />
                     </div>
@@ -406,28 +406,28 @@ const Settings = () => {
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <label htmlFor="accept-upi" className="text-sm font-medium">
-                    Accept UPI Payments
+                  <label htmlFor="accept-lipa" className="text-sm font-medium">
+                    Accept LIPA NAMBA Payments
                   </label>
                   <Switch
-                    id="accept-upi"
-                    checked={paymentSettings.acceptUPI}
+                    id="accept-lipa"
+                    checked={paymentSettings.acceptLIPA}
                     onCheckedChange={(checked) =>
-                      handlePaymentSettingsChange("acceptUPI", checked)
+                      handlePaymentSettingsChange("acceptLIPA", checked)
                     }
                   />
                 </div>
 
-                {paymentSettings.acceptUPI && (
+                {paymentSettings.acceptLIPA && (
                   <div className="space-y-2 pl-6 border-l-2 border-gray-100">
-                    <label htmlFor="upi-id" className="text-sm font-medium">
-                      Branch UPI ID
+                    <label htmlFor="lipa-id" className="text-sm font-medium">
+                      Branch LIPA NAMBA
                     </label>
                     <Input
-                      id="upi-id"
-                      value={paymentSettings.upiId}
+                      id="lipa-no-id"
+                      value={paymentSettings.LipaId}
                       onChange={(e) =>
-                        handlePaymentSettingsChange("upiId", e.target.value)
+                        handlePaymentSettingsChange("LipaId", e.target.value)
                       }
                     />
                   </div>

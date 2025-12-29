@@ -20,7 +20,7 @@ const Alerts = () => {
         dispatch(getStoreAlerts(user.id));
       }, []);
   return (
-    <div className='grid grid-cols-4 gap-4 p-4'>
+    <div className='grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 '>
         <div className='col-span-2 '>
             <Card className="min-h-96  px-5 py-1 pt-5">
                 <h1 className='font-bold text-2xl'>Inactive Cashiers</h1>

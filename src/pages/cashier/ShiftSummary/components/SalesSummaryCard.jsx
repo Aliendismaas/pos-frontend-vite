@@ -13,15 +13,15 @@ const SalesSummaryCard = ({ shiftData }) => {
           </div>
           <div className="flex justify-between">
             <span className="text-muted-foreground">Total Sales:</span>
-            <span className="font-medium">Tzs{shiftData.totalSales?.toFixed(2)}</span>
+            <span className="font-medium">Tzs {shiftData.totalSales?.toLocaleString()}</span>
           </div>
           <div className="flex justify-between text-destructive">
             <span>Total Refunds:</span>
-            <span>-Tzs{shiftData.totalRefunds?.toFixed(2)}</span>
+            <span>-Tzs {shiftData.totalRefunds?.toLocaleString()}</span>
           </div>
           <div className="flex justify-between font-bold pt-2 border-t">
             <span>Net Sales:</span>
-            <span>Tzs{shiftData.netSales?.toFixed(2)}</span>
+            <span>Tzs {shiftData.netSales?.toLocaleString()}</span>
           </div>
         </div>
       </CardContent>

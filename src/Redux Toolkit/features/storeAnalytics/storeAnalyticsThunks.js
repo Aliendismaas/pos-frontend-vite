@@ -243,7 +243,7 @@ export const getSalesByBranch = createAsyncThunk(
   }
 );
 
-// 🔹 Get Payment Breakdown (Cash, UPI, Card)
+// 🔹 Get Payment Breakdown (Cash, LIPA, Card)
 export const getPaymentBreakdown = createAsyncThunk(
   "storeAnalytics/getPaymentBreakdown",
   async (storeAdminId, { rejectWithValue }) => {

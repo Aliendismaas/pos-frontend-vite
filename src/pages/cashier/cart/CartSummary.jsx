@@ -27,12 +27,12 @@ const CartSummary = () => {
         {/* </div> */}
         <div className="flex justify-between">
           <span>Discount:</span>
-          <span className="text-red-600">- Tzs {discountAmount.toFixed(0)}</span>
+          <span className="text-red-600">- Tzs {discountAmount.toLocaleString()}</span>
         </div>
         <Separator />
         <div className="flex justify-between text-lg font-bold">
           <span>Total:</span>
-          <span className="text-green-600">Tzs {total?.toFixed(0)}</span>
+          <span className="text-green-600">Tzs {total?.toLocaleString()}</span>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "@/Redux Toolkit/features/user/userThunks";
@@ -11,7 +11,9 @@ import {
   UserCircle,
   FileText,
   Settings,
-  LogOut
+  LogOut,
+  X,
+  Menu
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RefreshCw } from "lucide-react";
@@ -69,6 +71,11 @@ export default function BranchManagerSidebar() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { branch } = useSelector((state) => state.branch);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   const handleLogout = () => {
     dispatch(logout());
@@ -76,7 +83,41 @@ export default function BranchManagerSidebar() {
   };
 
   return (
-    <aside className="h-screen w-64 bg-sidebar dark:bg-black border-r border-sidebar-border flex flex-col py-6 px-4 shadow-lg">
+    <>
+
+    <button
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        className="fixed top-4 left-4 z-50 lg:hidden bg-sidebar dark:bg-gray-900 border border-sidebar-border shadow-lg rounded-lg p-2 hover:bg-sidebar-accent transition-colors"
+        aria-label="Toggle menu"
+      >
+        {isMobileMenuOpen ? (
+          <X className="w-6 h-6" />
+        ) : (
+          <Menu className="w-6 h-6" />
+        )}
+      </button>
+
+      {/* Mobile Overlay */}
+      {isMobileMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden transition-opacity"
+          onClick={closeMobileMenu}
+        />
+      )}
+
+    <aside
+       className={`
+          fixed lg:relative
+          inset-y-0 left-0 z-40
+          h-screen w-64 md:w-72 lg:w-64 xl:w-72
+          bg-sidebar dark:bg-black border-r border-sidebar-border
+          flex flex-col py-6 px-4 shadow-lg
+          transition-transform duration-300 ease-in-out
+          ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+        `}
+    
+      // className="h-screen w-64 bg-sidebar dark:bg-black border-r border-sidebar-border flex flex-col py-6 px-4 shadow-lg"
+    >
       <div className="mb-8 text-2xl font-extrabold text-primary tracking-tight flex items-center gap-2">
         <Package className="w-7 h-7 text-primary" />
         Branch Manager
@@ -92,6 +133,7 @@ export default function BranchManagerSidebar() {
           {navLinks.map((link) => (
             <li key={link.name}>
               <Link
+               onClick={closeMobileMenu}
                 to={link.path}
                 className={`flex items-center gap-3 px-4 py-2 rounded-lg transition-colors text-base font-medium group ${
                   location.pathname.startsWith(link.path)
@@ -125,5 +167,6 @@ export default function BranchManagerSidebar() {
         </Button>
       </div>
     </aside>
+    </>
   );
 }

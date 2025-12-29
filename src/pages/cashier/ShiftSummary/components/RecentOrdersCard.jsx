@@ -31,7 +31,7 @@ const RecentOrdersCard = ({ shiftData }) => {
                   </>:"UNKNOWN"
              }
                 </TableCell>
-                <TableCell className="text-right">Tzs{order.totalAmount?.toFixed(2)}</TableCell>
+                <TableCell className="text-right">Tzs {order.totalAmount?.toLocaleString()}</TableCell>
               </TableRow>
             ))}
           </TableBody>

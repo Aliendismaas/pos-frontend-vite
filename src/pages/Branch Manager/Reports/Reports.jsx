@@ -89,7 +89,7 @@ const Reports = () => {
   const formatCurrency = (amount) => {
     return new Intl.NumberFormat('en-IN', {
       style: 'currency',
-      currency: 'INR',
+      currency: 'TZS',
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
     }).format(amount);
@@ -119,11 +119,12 @@ const Reports = () => {
       </div>
 
       <Tabs defaultValue="overview" className="space-y-6">
-        <TabsList>
+        <TabsList className="w-full mr-10">
           <TabsTrigger value="overview" className="flex items-center gap-2">
             <BarChart2 className="h-4 w-4" />
             Overview
           </TabsTrigger>
+          
           <TabsTrigger value="sales" className="flex items-center gap-2">
             <TrendingUp className="h-4 w-4" />
             Sales

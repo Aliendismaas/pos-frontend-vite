@@ -1,7 +1,7 @@
 export const paymentModeMap = {
   all: undefined,
   Cash: "CASH",
-  UPI: "UPI",
+  LIPA_NAMBA: "LIPA_NAMBA",
   Card: "CARD",
 };
 export const statusMap = {
